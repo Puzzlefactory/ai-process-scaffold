@@ -6,4 +6,4 @@ Canonical rule: active workstreams live in `.ai/workstreams/`. Use `workstream-t
 
 ## Index
 
-[none yet]
+- [Process Scaffold Refinement](process-scaffold-refinement.md) — improves the reusable agent workflow and validates that agents can follow it reliably.
