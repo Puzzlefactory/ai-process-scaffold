@@ -2,7 +2,7 @@
 
 Status: active
 Created: 2026-05-27
-Last Updated: 2026-05-27
+Last Updated: 2026-05-31
 
 This workstream tracks refinement of the reusable agent process scaffold. The goal is to make the workflow small, clear, and reliable enough that different coding agents can follow it across many project types without over-reading, skipping required context, or inventing missing files.
 
@@ -22,13 +22,14 @@ Out of scope:
 
 ## Current State
 
-The scaffold now uses thin root entry files that point agents to `.ai/instructions.md`. The instructions file contains a small required startup, task-type workflow branches, conditional reads for linked files, and a guard against claiming `.ai` files are missing without a filesystem check. `.ai/stack.md` has been generalized so it can describe many kinds of development projects, not only design systems.
+The scaffold now uses thin root entry files that point agents to `.ai/instructions.md`. The instructions file contains a small required startup, task-type workflow branches, conditional reads for linked files, and a guard against claiming `.ai` files are missing without a filesystem check. `.ai/stack.md` has been generalized so it can describe many kinds of development projects. A human-facing `README.md` now explains how to adopt the scaffold, what to customize first, what to do with scaffold-development workstreams, and how to pull future updates into downstream repos. `.ai/context.md` now describes this scaffold repo instead of remaining a blank template.
 
 ## Next Actions
 
 - Test the updated scaffold with at least one fresh agent session and note where it follows or ignores the flow.
 - Decide whether `.ai/tasks/README.md` is too heavy for common projects or whether the tier system should remain as-is.
-- Consider adding a short checklist for agent closeout if repeated sessions fail to update durable context.
+- Decide whether `docs/graphics/` belongs in this generic scaffold or should be removed as project-specific noise.
+- Consider adding a short closeout checklist only if repeated sessions fail to update durable context.
 - Keep root wrappers minimal unless evidence shows a specific agent needs an additional startup guard.
 
 ## Completion Shape
@@ -36,6 +37,7 @@ The scaffold now uses thin root entry files that point agents to `.ai/instructio
 This workstream is substantially complete when:
 
 - Root entry files are minimal and stable.
+- A human README gives adopters a clear starting point.
 - `.ai/instructions.md` is short enough for agents to follow but explicit enough to prevent common failure modes.
 - The stack, coordination, task, and workstream files have clear conditional triggers.
 - The scaffold has been tested in at least two agent environments or sessions.
@@ -50,6 +52,8 @@ This workstream is substantially complete when:
 ## Key Decisions
 
 - **Thin root wrappers:** `AGENTS.md` and `CLAUDE.md` should point to `.ai/instructions.md` instead of duplicating the full file list.
+- **Human README:** The repo needs a root `README.md` for adopters; agent entry files are not a substitute for human onboarding.
+- **Branch cleanup timing:** The current work will be merged into `main`; after the merge, the `initial-design` branch will be deleted.
 - **Conditional linked-file reads:** Agents should always read required startup files, then read stack, coordination, task, and workstream files only when the selected flow calls for them.
 - **Verified missing-file claims:** Agents must inspect the filesystem before reporting that referenced `.ai` files are missing.
 
@@ -57,6 +61,7 @@ This workstream is substantially complete when:
 
 - `AGENTS.md`
 - `CLAUDE.md`
+- `README.md`
 - `.ai/instructions.md`
 - `.ai/context.md`
 - `.ai/decisions.md`
