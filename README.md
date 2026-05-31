@@ -13,6 +13,7 @@ The goal is to give agents enough durable context to work across sessions withou
 - Technical baseline: `.ai/stack.md`
 - Multi-session work tracking: `.ai/workstreams/`
 - Disposable task plans: `.ai/tasks/`
+- Reusable agent prompt templates: `.ai/prompt-templates/`
 - ADR home: `docs/adr/`
 
 ## How To Use It In A Project
@@ -23,6 +24,7 @@ The goal is to give agents enough durable context to work across sessions withou
 4. Keep `.ai/decisions.md` as the current index of binding decisions.
 5. Create workstreams only for open-ended, multi-session, architectural, or cross-agent work.
 6. Leave `.ai/tasks/` empty except for short-lived active task files.
+7. Use `.ai/prompt-templates/` as optional copy-and-fill prompts for authorizing or coordinating agent work.
 
 ## What To Customize First
 

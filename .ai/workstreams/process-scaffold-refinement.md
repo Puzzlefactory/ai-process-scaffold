@@ -22,7 +22,7 @@ Out of scope:
 
 ## Current State
 
-The scaffold now uses thin root entry files that point agents to `.ai/instructions.md`. The instructions file contains a small required startup, task-type workflow branches, conditional reads for linked files, and a guard against claiming `.ai` files are missing without a filesystem check. `.ai/stack.md` has been generalized so it can describe many kinds of development projects. A human-facing `README.md` now explains how to adopt the scaffold, what to customize first, what to do with scaffold-development workstreams, and how to pull future updates into downstream repos. `.ai/context.md` now describes this scaffold repo instead of remaining a blank template.
+The scaffold now uses thin root entry files that point agents to `.ai/instructions.md`. The instructions file contains a small required startup, task-type workflow branches, conditional reads for linked files, and a guard against claiming `.ai` files are missing without a filesystem check. `.ai/stack.md` has been generalized so it can describe many kinds of development projects. A human-facing `README.md` now explains how to adopt the scaffold, what to customize first, what to do with scaffold-development workstreams, and how to pull future updates into downstream repos. `.ai/context.md` now describes this scaffold repo instead of remaining a blank template. `.ai/prompt-templates/work-authorization.md` provides a reusable authorization prompt for scoped implementation work.
 
 ## Next Actions
 
@@ -67,4 +67,5 @@ This workstream is substantially complete when:
 - `.ai/decisions.md`
 - `.ai/stack.md`
 - `.ai/tasks/README.md`
+- `.ai/prompt-templates/work-authorization.md`
 - `.ai/workstreams/README.md`

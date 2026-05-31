@@ -14,6 +14,7 @@ The repo contains root agent entry shims, a canonical `.ai/instructions.md` work
 - `.ai/`: durable agent context and workflow files
 - `.ai/workstreams/`: current-state files for open-ended or multi-session work
 - `.ai/tasks/`: ignored short-lived task files
+- `.ai/prompt-templates/`: reusable copy-and-fill prompts for authorizing or coordinating agent work
 - `docs/adr/`: place for architecture decision records
 - `docs/graphics/`: project-specific brand assets that may not belong in the generic scaffold
 
