@@ -2,13 +2,17 @@
 
 Proceed with `<workstream or feature>` end to end.
 
-## Tier
+## Risk And Coordination
 
-Classify this work using `.ai/tasks/README.md`.
+Classify risk and coordination need using `.ai/tasks/README.md`.
 
-Expected tier: `<Tier 1 | Tier 2 | Tier 3>`.
+Expected risk: `<High | Medium | Low>`.
 
-If the classification differs from the expected tier, follow the actual tier requirements. For Tier 1 or Tier 2 work, record the reason in the task file before implementation. For Tier 3 work, mention the reason in closeout.
+Expected task file: `<yes | no>`.
+
+If the classification differs from the expected risk, follow the actual review requirements. Record the reason in the task file when one is used; otherwise mention the reason in closeout.
+
+Create a task file only when coordination requires durable execution state or this authorization explicitly requires one.
 
 ## Scope
 
@@ -32,7 +36,7 @@ Do not stop after research. Continue into planning, implementation, verification
 
 Read `AGENTS.md`, then follow the startup and task flow in `.ai/instructions.md`.
 
-Create required `.ai/tasks/*` task files before implementation.
+Create a `.ai/tasks/*` task file before implementation only when required by coordination need or explicit authorization.
 
 Update durable `.ai` context, decisions, stack, or workstream files during closeout when project state changes or future agents need the information.
 
@@ -48,11 +52,11 @@ Do not implement out-of-scope packages, apps, features, or refactors.
 
 ## Review
 
-Perform required review according to `.ai/coordination.md`.
+Perform required review according to `.ai/tasks/README.md` and `.ai/coordination.md`.
 
-Use an independent reviewer where the environment supports it. This authorization includes spawning or delegating to an independent reviewer when required by the task tier.
+Use an independent reviewer where the environment supports it. This authorization includes spawning or delegating to an independent reviewer when required by the risk level.
 
-If required review cannot be performed, record why before closeout.
+If required independent review cannot be performed, do an explicit self-review and record why independent review was unavailable before closeout.
 
 Address review findings before closeout, or record why they are intentionally deferred.
 

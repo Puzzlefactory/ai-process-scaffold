@@ -21,9 +21,9 @@ These instructions apply to agents working in this repo.
 ### Implement / Edit / Fix / Build
 
 1. Read the relevant `.ai/workstreams/*.md` file if one exists.
-2. Read `.ai/tasks/README.md` unless the work is clearly Tier 3.
+2. Read `.ai/tasks/README.md` unless the work is clearly low risk and single-session.
 3. Read `.ai/stack.md` if the change touches technology, dependencies, runtime, deployment, interfaces, or storage.
-4. Create a disposable task file for Tier 1 or Tier 2 work.
+4. Create a disposable task file only when coordination requires durable execution state.
 5. Make the change.
 6. Run appropriate checks.
 7. Update the relevant workstream if current state or next actions changed.
@@ -45,7 +45,7 @@ These instructions apply to agents working in this repo.
 ### Coordinate Agents / Reviews
 
 1. Read `.ai/coordination.md`.
-2. Follow the task tier review rules in `.ai/tasks/README.md`.
+2. Follow the risk-level review rules in `.ai/tasks/README.md`.
 
 ### If Unsure
 
@@ -68,7 +68,7 @@ Create a workstream when:
 
 Do not create a workstream for:
 
-- Single contained tasks (use a disposable task file instead).
+- Single contained tasks.
 - Work that is complete with no ongoing successor thread.
 
 Update workstreams in-place: overwrite Current State and Next Actions as things change. Do not append a running log.

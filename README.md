@@ -12,7 +12,7 @@ The goal is to give agents enough durable context to work across sessions withou
 - Active decisions: `.ai/decisions.md`
 - Technical baseline: `.ai/stack.md`
 - Multi-session work tracking: `.ai/workstreams/`
-- Disposable task plans: `.ai/tasks/`
+- Disposable coordination task files and review guidance: `.ai/tasks/`
 - Reusable agent prompt templates: `.ai/prompt-templates/`
 - ADR home: `docs/adr/`
 
@@ -23,7 +23,7 @@ The goal is to give agents enough durable context to work across sessions withou
 3. Fill in `.ai/stack.md` when the project has real technical choices.
 4. Keep `.ai/decisions.md` as the current index of binding decisions.
 5. Create workstreams only for open-ended, multi-session, architectural, or cross-agent work.
-6. Leave `.ai/tasks/` empty except for short-lived active task files.
+6. Leave `.ai/tasks/` empty except for short-lived active task files when coordination needs durable execution state.
 7. Use `.ai/prompt-templates/` as optional copy-and-fill prompts for authorizing or coordinating agent work.
 
 ## What To Customize First
@@ -58,7 +58,7 @@ When this scaffold improves later, do not blindly overwrite a downstream repo.
 ## Current Cleanup Notes
 
 - The scaffold still needs validation in fresh agent sessions.
-- The task tier system may need simplification after real use.
+- The risk and review model still needs validation in fresh agent sessions.
 - `docs/graphics/` contains project-specific brand assets and should be removed if this repo is intended to stay fully generic.
 
 ## Design Principles
