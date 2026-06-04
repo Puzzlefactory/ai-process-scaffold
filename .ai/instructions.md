@@ -14,6 +14,7 @@ These instructions apply to agents working in this repo.
 - Prefer small, scoped changes.
 - Read context before writing code.
 - Update durable context only when future agents need it.
+- If the user asks for a prompt, use `.ai/prompt-templates/README.md` to choose the appropriate template.
 - Write a dated context record in `.ai/context/` when a session produces strategic insight with cross-session value that does not fit a workstream or decisions entry. Create the directory and a `README.md` index on first use.
 
 ## Choose The Flow

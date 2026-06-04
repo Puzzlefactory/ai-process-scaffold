@@ -2,7 +2,13 @@
 
 Reusable prompts for authorizing or coordinating agent work.
 
-These templates are optional starting points. Fill in the placeholders, keep the authorization scoped, and let `AGENTS.md` and `.ai/instructions.md` remain the source of truth for repo workflow.
+Fill in the placeholders, keep the authorization scoped, and let `AGENTS.md` and `.ai/instructions.md` remain the source of truth for repo workflow.
+
+## Prompt Template Rule
+
+Prompt generation is user-triggered. When the user asks for a prompt to authorize agent work, always generate it from one of the templates in this directory.
+
+Do not invent a new prompt structure unless the user explicitly asks for a custom format.
 
 ## Templates
 
