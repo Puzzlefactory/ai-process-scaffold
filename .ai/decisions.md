@@ -9,6 +9,7 @@ This file is a rolling index of currently binding decisions. Use ADRs in `docs/a
 - Use workstream files for active flow state; workstreams are updated in-place, not appended.
 - Use ADRs for significant process or architecture decisions.
 - Risk level controls review rigor; coordination need controls whether a disposable task file is useful.
+- High-risk work requires independent review unless explicitly waived; required-review fallbacks must state exactly why independent review was unavailable and report explicit self-review.
 - Active task files live under `.ai/tasks/`, are ignored by git, and are used only when execution state needs to survive outside the active agent session.
 - Reusable copy-and-fill prompts for authorizing or coordinating agent work live under `.ai/prompt-templates/`.
 - Root agent entry files are thin shims; `.ai/instructions.md` owns the workflow and decides which linked files are read for each task type.

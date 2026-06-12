@@ -40,11 +40,12 @@ For low-risk work, one agent may act as both orchestrator and owner.
 
 ## Review Assignment
 
-- High risk: independent review required where supported
-- Medium risk: independent review preferred, and required for public APIs, design-system invariants, broad behavioral changes, or user-specified review boundaries
-- Low risk: self-review allowed
-- If required independent review is unavailable, perform and report an explicit self-review
-- The owner must not act as the reviewer when review is required
+- High risk: independent review is required unless the user explicitly waives it.
+- Medium risk: independent review is required for source-of-truth data/storage, API contracts, auth/security, pipelines, build/deploy tooling, process contracts, broad UI behavior, or user-specified review boundaries.
+- Other medium-risk work: independent review is preferred.
+- Low risk: self-review is allowed.
+- If required independent review is unavailable, state exactly why, perform an explicit self-review, and report that fallback in closeout.
+- The owner must not act as the reviewer when independent review is required.
 
 ## When to Surface to the User
 

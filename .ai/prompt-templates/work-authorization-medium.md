@@ -47,7 +47,7 @@ Perform review according to `.ai/tasks/README.md` and `.ai/coordination.md`.
 
 Independent review is preferred for medium-risk work, and required when the actual risk or user authorization requires it.
 
-If required independent review cannot be performed, do an explicit self-review and record why independent review was unavailable before closeout.
+If required independent review cannot be performed, state exactly why, do an explicit self-review, and report that fallback in closeout.
 
 ## Verification
 

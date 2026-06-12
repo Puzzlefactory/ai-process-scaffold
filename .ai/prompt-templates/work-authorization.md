@@ -54,9 +54,9 @@ Do not implement out-of-scope packages, apps, features, or refactors.
 
 Perform required review according to `.ai/tasks/README.md` and `.ai/coordination.md`.
 
-Use an independent reviewer where the environment supports it. This authorization includes spawning or delegating to an independent reviewer when required by the risk level.
+Use an independent reviewer when required by the risk level. This authorization includes spawning or delegating to an independent reviewer when required.
 
-If required independent review cannot be performed, do an explicit self-review and record why independent review was unavailable before closeout.
+If required independent review cannot be performed, state exactly why, do an explicit self-review, and report that fallback in closeout.
 
 Address review findings before closeout, or record why they are intentionally deferred.
 

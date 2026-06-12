@@ -38,8 +38,8 @@ Examples:
 
 Requirements:
 
-- independent review required where supported
-- if independent review is unavailable, perform and report an explicit self-review
+- independent review is required unless the user explicitly waives it
+- if required independent review is unavailable, state exactly why, perform an explicit self-review, and report that fallback in closeout
 - durable context update required when project state, decisions, or next actions change
 
 ### Medium Risk
@@ -55,9 +55,9 @@ Examples:
 
 Requirements:
 
-- independent review preferred
-- independent review required for public APIs, design-system invariants, broad behavioral changes, or other user-specified review boundaries
-- if required independent review is unavailable, perform and report an explicit self-review
+- independent review is required for source-of-truth data/storage, API contracts, auth/security, pipelines, build/deploy tooling, process contracts, broad UI behavior, or user-specified review boundaries
+- independent review is preferred for other medium-risk work
+- if required independent review is unavailable, state exactly why, perform an explicit self-review, and report that fallback in closeout
 - durable context update required when project state, decisions, or next actions change
 
 ### Low Risk
@@ -74,7 +74,7 @@ Examples:
 
 Requirements:
 
-- self-review allowed
+- self-review is allowed
 - update durable context only if the current state changes
 
 ## Task File Triggers
