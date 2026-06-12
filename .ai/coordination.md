@@ -36,14 +36,16 @@ When spawning agents in parallel, each needs a fully self-contained prompt and a
 - **Owner** — implements within the agreed scope. Receives a self-contained brief from the orchestrator.
 - **Reviewer** — verifies independently when review is required. Must be a fresh agent with no context from the implementation session.
 
-For Tier 3 work, one agent may act as both orchestrator and owner.
+For low-risk work, one agent may act as both orchestrator and owner.
 
 ## Review Assignment
 
-- Tier 1: independent review required
-- Tier 2: independent review required unless explicitly waived
-- Tier 3: self-review allowed
-- The owner must not act as the reviewer when review is required
+- High risk: independent review is required unless the user explicitly waives it.
+- Medium risk: independent review is required for source-of-truth data/storage, API contracts, auth/security, pipelines, build/deploy tooling, process contracts, broad UI behavior, or user-specified review boundaries.
+- Other medium-risk work: independent review is preferred.
+- Low risk: self-review is allowed.
+- If required independent review is unavailable, state exactly why, perform an explicit self-review, and report that fallback in closeout.
+- The owner must not act as the reviewer when independent review is required.
 
 ## When to Surface to the User
 

@@ -6,7 +6,7 @@ Create a lightweight, reusable process scaffold for development projects that us
 
 ## Current Shape
 
-The repo contains root agent entry shims, a canonical `.ai/instructions.md` workflow, rolling context and decisions files, a generic stack template, coordination guidance, disposable task guidance, workstream templates, and ADR scaffolding. The process model is actively being refined and needs validation in fresh agent sessions.
+The repo contains root agent entry shims, a canonical `.ai/instructions.md` workflow, rolling context and decisions files, a generic stack template, coordination guidance, risk/review guidance, optional disposable task guidance, workstream templates, prompt templates, and ADR scaffolding. The process model is actively being refined and needs validation in fresh agent sessions.
 
 ## Repository Layout
 
@@ -14,6 +14,7 @@ The repo contains root agent entry shims, a canonical `.ai/instructions.md` work
 - `.ai/`: durable agent context and workflow files
 - `.ai/workstreams/`: current-state files for open-ended or multi-session work
 - `.ai/tasks/`: ignored short-lived task files
+- `.ai/prompt-templates/`: reusable copy-and-fill prompts for authorizing or coordinating agent work
 - `docs/adr/`: place for architecture decision records
 - `docs/graphics/`: project-specific brand assets that may not belong in the generic scaffold
 

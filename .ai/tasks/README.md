@@ -1,6 +1,8 @@
-# Disposable Task Files
+# Task Files And Review
 
 Task files are short-lived execution plans for specific work. They are not durable project history.
+
+Risk level controls review rigor. Coordination need controls whether a task file is useful.
 
 Durable state belongs in:
 
@@ -15,14 +17,14 @@ A task is complete only when:
 
 - the work is completed or explicitly abandoned
 - required review is completed or explicitly waived
-- durable findings are copied into the relevant workstream
+- durable findings are copied into the relevant workstream, context, decisions, stack notes, or ADR when needed
 - the task file is deleted
 
 Active task files are ignored by git. Do not commit them.
 
-## Tier System
+## Risk Levels
 
-### Tier 1
+### High Risk
 
 High-risk or broad work.
 
@@ -36,12 +38,11 @@ Examples:
 
 Requirements:
 
-- task file required
-- independent review required where supported
-- workstream update required
-- task file must be deleted after closeout
+- independent review is required unless the user explicitly waives it
+- if required independent review is unavailable, state exactly why, perform an explicit self-review, and report that fallback in closeout
+- durable context update required when project state, decisions, or next actions change
 
-### Tier 2
+### Medium Risk
 
 Moderate-risk, bounded work.
 
@@ -54,12 +55,12 @@ Examples:
 
 Requirements:
 
-- task file required
-- review required unless explicitly waived by the user
-- workstream update required
-- task file must be deleted after closeout
+- independent review is required for source-of-truth data/storage, API contracts, auth/security, pipelines, build/deploy tooling, process contracts, broad UI behavior, or user-specified review boundaries
+- independent review is preferred for other medium-risk work
+- if required independent review is unavailable, state exactly why, perform an explicit self-review, and report that fallback in closeout
+- durable context update required when project state, decisions, or next actions change
 
-### Tier 3
+### Low Risk
 
 Low-risk, isolated work.
 
@@ -73,18 +74,34 @@ Examples:
 
 Requirements:
 
-- task file optional
-- review optional
+- self-review is allowed
 - update durable context only if the current state changes
+
+## Task File Triggers
+
+Use a disposable `.ai/tasks/*` file only when execution state needs to survive outside the active agent session:
+
+- multi-agent coordination
+- long-running or resumable work
+- work paused before completion
+- explicit user authorization requiring a task file
+
+Do not create task files for ordinary single-session work that can be tracked in the agent's native plan or todo surface.
 
 ## Task Template
 
 ```md
 # Task: <short name>
 
-## Tier
+## Risk
 
-Tier 1 | Tier 2 | Tier 3
+High | Medium | Low
+
+Why this risk level applies.
+
+## Coordination
+
+Why this task file is needed.
 
 ## Scope
 
@@ -110,7 +127,6 @@ What will change, and what is explicitly out of scope.
 
 - [ ] Work completed or explicitly abandoned
 - [ ] Required review completed or waived
-- [ ] Durable findings copied to the relevant workstream
+- [ ] Durable findings copied to the relevant `.ai` file when needed
 - [ ] Task file deleted
 ```
-
