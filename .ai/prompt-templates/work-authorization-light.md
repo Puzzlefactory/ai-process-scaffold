@@ -18,7 +18,8 @@ Expected risk: `Low`.
 
 Expected task file: `no`.
 
-Do not create a task file unless this work becomes resumable, multi-agent, blocked before completion, or explicitly requires durable execution state.
+Do not create a task file unless this work becomes resumable, multi-agent, blocked before
+completion, or explicitly requires durable execution state.
 
 ## Implementation
 

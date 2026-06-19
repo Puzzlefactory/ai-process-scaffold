@@ -2,7 +2,7 @@
 
 Status: active
 Created: 2026-05-27
-Last Updated: 2026-06-04
+Last Updated: 2026-06-19
 
 This workstream tracks refinement of the reusable agent process scaffold. The goal is to make the workflow small, clear, and reliable enough that different coding agents can follow it across many project types without over-reading, skipping required context, or inventing missing files.
 
@@ -22,14 +22,21 @@ Out of scope:
 
 ## Current State
 
-The scaffold now uses thin root entry files that point agents to `.ai/instructions.md`. The instructions file contains a small required startup, task-type workflow branches, conditional reads for linked files, and a guard against claiming `.ai` files are missing without a filesystem check. `.ai/stack.md` has been generalized so it can describe many kinds of development projects. A human-facing `README.md` now explains how to adopt the scaffold, what to customize first, what to do with scaffold-development workstreams, and how to pull future updates into downstream repos. `.ai/context.md` now describes this scaffold repo instead of remaining a blank template. `.ai/tasks/README.md` now separates risk-driven review from optional task-file coordination. `.ai/prompt-templates/work-authorization.md` provides a reusable authorization prompt for scoped implementation work.
+The scaffold has thin root entry files, a conditional startup flow in `.ai/instructions.md`, and
+three prompt templates tiered by risk. Startup now requires agents to check git status and read
+`context.md`/`decisions.md` only for non-trivial or ambiguous tasks — not unconditionally.
+`context.md` has been trimmed to current state and resume pointers only; repository layout content
+was removed (it belongs in `README.md`). The `context/` archive pattern is now codified with a
+`README.md` naming convention and a `LATEST.md` pointer. `instructions.md` references
+`coordination.md` explicitly on high-risk work so agents know to check it. The three prompt
+templates have been tightened — the medium variant no longer duplicates full-template preamble.
+`docs/graphics/` has been removed (contained project-specific brand assets by mistake).
 
 ## Next Actions
 
 - Test the updated scaffold with at least one fresh agent session and note where it follows or ignores the flow.
-- Validate whether the risk/review and optional task-file model is lightweight enough in fresh agent sessions.
-- Decide whether `docs/graphics/` belongs in this generic scaffold or should be removed as project-specific noise.
-- Consider adding a short closeout checklist only if repeated sessions fail to update durable context.
+- Validate whether conditional startup reads cause agents to skip context they actually need.
+- Consider propagating lean-startup improvements back to `le-mono-repo-1` which is still on the older mandatory-reads pattern.
 - Keep root wrappers minimal unless evidence shows a specific agent needs an additional startup guard.
 
 ## Completion Shape

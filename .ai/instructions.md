@@ -5,17 +5,23 @@ These instructions apply to agents working in this repo.
 ## Required Startup
 
 1. Read this file.
-2. Read `.ai/context.md`.
-3. Read `.ai/decisions.md`.
-4. If a referenced `.ai` file appears missing, inspect `.ai/` before reporting that it is missing.
+2. Check git status.
+3. Read `.ai/context.md` and `.ai/decisions.md` when the task is non-trivial, architectural,
+   resumed, or ambiguous.
+4. Read the relevant workstream, plan, or reference doc only when the task touches that area.
+
+If a referenced `.ai` file appears missing, inspect `.ai/` before reporting that it is missing.
 
 ## Working Rules
 
 - Prefer small, scoped changes.
 - Read context before writing code.
 - Update durable context only when future agents need it.
+- On high-risk work, read `.ai/coordination.md` for role definitions and review assignment rules.
 - If the user asks for a prompt, use `.ai/prompt-templates/README.md` to choose the appropriate template.
-- Write a dated context record in `.ai/context/` when a session produces strategic insight with cross-session value that does not fit a workstream or decisions entry. Create the directory and a `README.md` index on first use.
+- Write a dated context record in `.ai/context/` when a session produces strategic insight with
+  cross-session value that does not fit a workstream or decisions entry. See `.ai/context/README.md`
+  for naming convention and index maintenance.
 
 ## Choose The Flow
 
