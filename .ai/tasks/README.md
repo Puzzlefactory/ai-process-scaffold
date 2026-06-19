@@ -79,14 +79,15 @@ Requirements:
 
 ## Task File Triggers
 
-Use a disposable `.ai/tasks/*` file only when execution state needs to survive outside the active agent session:
+For single-session contained work, no task file is needed — the agent manages execution state
+internally. Create a task file only when the state needs to be visible outside the agent:
 
 - multi-agent coordination
 - long-running or resumable work
 - work paused before completion
 - explicit user authorization requiring a task file
 
-Do not create task files for ordinary single-session work that can be tracked in the agent's native plan or todo surface.
+A task file appearing in `.ai/tasks/` signals that something is in flight or needs handoff.
 
 ## Task Template
 

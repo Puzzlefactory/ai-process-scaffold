@@ -19,9 +19,9 @@ If a referenced `.ai` file appears missing, inspect `.ai/` before reporting that
 - Update durable context only when future agents need it.
 - On high-risk work, read `.ai/coordination.md` for role definitions and review assignment rules.
 - If the user asks for a prompt, use `.ai/prompt-templates/README.md` to choose the appropriate template.
-- Write a dated context record in `.ai/context/` when a session produces strategic insight with
-  cross-session value that does not fit a workstream or decisions entry. See `.ai/context/README.md`
-  for naming convention and index maintenance.
+- Write a dated context record in `.ai/context/` when a new agent resuming this project would make
+  a wrong decision without it, and the insight does not fit a workstream or decisions entry. Skip it
+  otherwise. See `.ai/context/README.md` for naming convention and index maintenance.
 
 ## Choose The Flow
 

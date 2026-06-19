@@ -34,7 +34,7 @@ When spawning agents in parallel, each needs a fully self-contained prompt and a
 
 - **Orchestrator** — scopes the work, assigns agents, coordinates review, handles closeout. The main session is the orchestrator.
 - **Owner** — implements within the agreed scope. Receives a self-contained brief from the orchestrator.
-- **Reviewer** — verifies independently when review is required. Must be a fresh agent with no context from the implementation session.
+- **Reviewer** — a freshly spawned agent with no context from the implementation session. Brief it with the scope, the changed files, and what to look for. If spawning fails, self-review explicitly and report the fallback in closeout.
 
 For low-risk work, one agent may act as both orchestrator and owner.
 

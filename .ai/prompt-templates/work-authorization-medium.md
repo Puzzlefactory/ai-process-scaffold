@@ -61,3 +61,7 @@ Summarize changed files and important decisions.
 Confirm no task file was required, or confirm any created task file was deleted.
 
 Confirm durable `.ai` context was updated, or state that no durable context update was needed.
+
+Interrupt only if completing this task requires changing something outside the authorized scope, or
+if you discover that the authorized approach is unsafe or blocked. Do not interrupt for
+implementation choices within scope.
