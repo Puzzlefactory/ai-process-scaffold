@@ -21,7 +21,8 @@ human-adoptable, and generic enough for many development project types.
 
 When resuming work:
 
-1. Read `.ai/decisions.md`.
-2. Read the relevant workstream file in `.ai/workstreams/`.
-3. Check git status.
-4. Continue from the workstream's next actions rather than relying on chat history.
+1. Check git status.
+2. Read `.ai/decisions.md`.
+3. Read `.ai/context/LATEST.md` — if it points to a real record, read that record.
+4. Read the relevant workstream file in `.ai/workstreams/`.
+5. Continue from the workstream's next actions rather than relying on chat history.

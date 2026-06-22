@@ -1,7 +1,8 @@
 # Context Archive
 
-Dated records of strategic insight, major decisions, or session handoffs that have cross-session
-value but do not belong in a workstream or `decisions.md`.
+Dated records of reasoning, findings, and session handoffs that have cross-session value but do not
+belong in a workstream or `decisions.md`. Decisions belong in `decisions.md` or `docs/adr/` —
+not here.
 
 ## When to Write a Record
 

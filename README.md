@@ -59,7 +59,6 @@ When this scaffold improves later, do not blindly overwrite a downstream repo.
 
 - The scaffold still needs validation in fresh agent sessions.
 - The risk and review model still needs validation in fresh agent sessions.
-- `docs/graphics/` contains project-specific brand assets and should be removed if this repo is intended to stay fully generic.
 
 ## Design Principles
 
